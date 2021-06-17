@@ -1,0 +1,37 @@
+name: Quality Gates
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+
+env:
+  NPM_SCOPE: dipa-projekt
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - name: Set up Node.js
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@${{ env.NPM_SCOPE }}"
+      - name: Restore cache
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+      - name: Run quality gates
+        run: |
+          npm ci
+          npm run format
+          npm run lint
+          npm run build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_HUB_PACKAGES_ACCESS_TOKEN }}
