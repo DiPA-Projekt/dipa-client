@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>DiPA-Client | DiPA-Projekt</title>
+    <meta name="description" content="" />
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="assets/icofont/icofont.css" />
+    <link rel="stylesheet" href="assets/bund/bund.css" />
+    <style>
+      :root {
+        --kolibri-color-default: #000000;
+        --kolibri-color-primary: #326cae;
+        --kolibri-color-secondary: #1e538f;
+        --kolibri-color-neutral: rgba(0, 0, 0, 0.33);
+        --kolibri-color-accent: #ef9e48;
+        --kolibri-color-selected: #1e538f;
+        --kolibri-color-success: #5cb85c;
+        --kolibri-color-info: #326cae;
+        --kolibri-color-warning: #a8672c;
+        --kolibri-color-error: #a94442;
+        --kolibri-color-heading: #000000;
+        --kolibri-color-text: #000000;
+        --kolibri-color-border: rgba(0, 0, 0, 0.5);
+        --kolibri-color-spin-1: #000000;
+        --kolibri-color-spin-2: #ff0000;
+        --kolibri-color-spin-3: #ffcc00;
+        --kolibri-border-radius: 0.25rem;
+      }
+    </style>
+    <script>
+      // eslint-disable-next-line no-unused-vars
+      var DiPA = {
+        redirectUrl: window.location.origin + '/',
+      };
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Snowpack, Webpack -->
+    <script async src="main.js"></script>
+    <noscript>Diese Webseite erfordert, dass Sie JavaScript aktivieren.</noscript>
+  </body>
+</html>
