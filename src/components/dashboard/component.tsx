@@ -113,7 +113,7 @@ class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> im
             <div slot="footer">
               <KolButton
                 className="content-end"
-                _text="Ausnahmeantag erstellen"
+                _label="Ausnahmeantag erstellen"
                 _icon={Icofont['library']}
                 _on={{
                   onClick: () => {
@@ -133,10 +133,10 @@ class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> im
               </p>
               <p className="pt-1">Mit den folgenden Aktionen kann der OpenID-Connect-Mechanismus ausprobiert werden.</p>
             </div>
-            <div slot="footer" className="grid gap-2 grid-cols-1">
+            <div slot="footer" className="grid grid-cols-1">
               <KolButton
                 className="content-end"
-                _text="Einloggen*"
+                _label="Einloggen*"
                 _icon={Icofont['login']}
                 _on={{
                   onClick: () => {
@@ -147,7 +147,7 @@ class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> im
 
               <KolButton
                 className="content-end"
-                _text="Benutzerdaten"
+                _label="Benutzerdaten"
                 _icon={Icofont['user']}
                 _on={{
                   onClick: () => {
@@ -157,7 +157,7 @@ class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> im
               ></KolButton>
               <KolButton
                 className="content-end"
-                _text="Token erneuern"
+                _label="Token erneuern"
                 _icon={Icofont['refresh']}
                 _on={{
                   onClick: () => {
@@ -167,7 +167,7 @@ class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> im
               ></KolButton>
               <KolButton
                 className="content-end"
-                _text="Logout"
+                _label="Logout"
                 _icon={Icofont['logout']}
                 _on={{
                   onClick: () => {

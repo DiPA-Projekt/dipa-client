@@ -1,4 +1,4 @@
-import { User, UserManager, UserManagerSettings } from 'oidc-client';
+import { User, UserManager, UserManagerSettings, WebStorageStateStore } from 'oidc-client';
 import { Observable, Subscriber } from 'rxjs';
 
 declare global {
@@ -57,6 +57,9 @@ export class OIDCService {
       automaticSilentRenew: true,
       filterProtocolClaims: true,
       loadUserInfo: true,
+      userStore: new WebStorageStateStore({
+        store: window.localStorage,
+      }),
     };
     this.userManager = new UserManager(settings);
     this.userManager
@@ -68,15 +71,17 @@ export class OIDCService {
         if (error.message !== 'No state in response') {
           console.warn(error);
         } else {
-          this.userManager
-            .getUser()
-            .then((user: User | null) => {
-              this.setUser(user);
-            })
-            .catch((error: Error) => {
-              console.warn(error);
-            });
         }
+      })
+      .finally(() => {
+        this.userManager
+          .getUser()
+          .then((user: User | null) => {
+            this.setUser(user);
+          })
+          .catch((error: Error) => {
+            console.warn(error);
+          });
       });
   }
 

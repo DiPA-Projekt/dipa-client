@@ -4,7 +4,9 @@ import { Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom
 
 import { Icofont } from '@kolibri/lib';
 import { BreadcrumbLink } from '@kolibri/lib/dist/types/interfaces/components/breadcrumb';
-import { KolBreadcrumb, KolIcofont, KolLink, KolNav, KolSkipNav, KolTag, KolVersion } from '@kolibri/react';
+import {
+    KolBreadcrumb, KolIcofont, KolLink, KolNav, KolSkipNav, KolTag, KolVersion
+} from '@kolibri/react';
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { ReactComponent } from '@leanup/lib/components/react';
 import { DI } from '@leanup/lib/helpers/injector';
@@ -27,7 +29,7 @@ class AppComponent extends ReactComponent<RouteComponentProps<any>, State> imple
     user: null,
   };
 
-  public constructor(props: Props) {
+  public constructor(props: RouteComponentProps<any>) {
     super(props);
     this.oidcService.$user.subscribe({
       next: (user: User | null) => {
@@ -87,7 +89,7 @@ class AppComponent extends ReactComponent<RouteComponentProps<any>, State> imple
             <nav className="col-span-2 md:col-span-1">
               <ul className="flex content-center text-lg text-white">
                 <li className="px-4 py-2 border-t-4 border-transparent hover:border-white">
-                  <KolLink _href="#/" _useCase="image" _title="Zur Startseite">
+                  <KolLink _href="#/" _useCase="image" _ariaLabel="Zur Startseite">
                     <KolIcofont _icon={Icofont['home']} />
                   </KolLink>
                 </li>
@@ -211,7 +213,13 @@ class AppComponent extends ReactComponent<RouteComponentProps<any>, State> imple
           </div>
         </main>
         <footer className="container m-auto text-center border-t my-10 p-4">
-          <KolIcofont className="text-gray-500 my-2 block" _icon={Icofont['woodpecker']} _zoom={500}></KolIcofont>
+          <KolIcofont
+            className="text-gray-500 my-2 block"
+            _icon={Icofont['woodpecker']}
+            style={{
+              fontSize: '500%',
+            }}
+          ></KolIcofont>
           <KolVersion _version={packageJson.version}></KolVersion>
           {/* <p className="block my-4">© Informationstechnikzentrum Bund, 2021</p> */}
           <p className="block my-4">© Martin Oppitz, 2021</p>
