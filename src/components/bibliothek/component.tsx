@@ -2,8 +2,16 @@ import React from 'react';
 
 import { CharBasedInputType, Icofont, OptionBasedInputType } from '@kolibri/lib';
 import {
-    KolAccordion, KolButton, KolControlledInput, KolDetails, KolForm, KolHeading, KolIndentedText,
-    KolModal, KolSpin, KolToastMessage
+  KolAccordion,
+  KolButton,
+  KolControlledInput,
+  KolDetails,
+  KolForm,
+  KolHeading,
+  KolIndentedText,
+  KolModal,
+  KolSpin,
+  KolToastMessage,
 } from '@kolibri/react';
 import { InputControl } from '@leanup/form/controls/controls';
 import { GenericComponent } from '@leanup/lib/components/generic';

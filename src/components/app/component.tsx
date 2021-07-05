@@ -4,9 +4,7 @@ import { Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom
 
 import { Icofont } from '@kolibri/lib';
 import { BreadcrumbLink } from '@kolibri/lib/dist/types/interfaces/components/breadcrumb';
-import {
-    KolBreadcrumb, KolIcofont, KolLink, KolNav, KolSkipNav, KolTag, KolVersion
-} from '@kolibri/react';
+import { KolBreadcrumb, KolIcofont, KolLink, KolNav, KolSkipNav, KolTag, KolVersion } from '@kolibri/react';
 import { GenericComponent } from '@leanup/lib/components/generic';
 import { ReactComponent } from '@leanup/lib/components/react';
 import { DI } from '@leanup/lib/helpers/injector';
