@@ -2,16 +2,8 @@ import React from 'react';
 
 import { CharBasedInputType, Icofont, OptionBasedInputType } from '@kolibri/lib';
 import {
-  KolAccordion,
-  KolButton,
-  KolControlledInput,
-  KolDetails,
-  KolForm,
-  KolHeading,
-  KolIndentedText,
-  KolModal,
-  KolSpin,
-  KolToastMessage,
+    KolAccordion, KolButton, KolControlledInput, KolDetails, KolForm, KolHeading, KolIndentedText,
+    KolModal, KolSpin, KolToastMessage
 } from '@kolibri/react';
 import { InputControl } from '@leanup/form/controls/controls';
 import { GenericComponent } from '@leanup/lib/components/generic';
@@ -50,10 +42,10 @@ export class BibliothekComponent extends ReactComponent<unknown, State> implemen
   public render(): JSX.Element {
     return (
       <>
-        <KolHeading _text="Ausnahmeantrag erstellen"></KolHeading>
+        <KolHeading>Ausnahmeantrag erstellen</KolHeading>
         <div className="grid grid-cols-1">
           <KolForm>
-            <KolHeading _text="Bibliotheken" _level={2}></KolHeading>
+            <KolHeading _level={2}>Bibliotheken</KolHeading>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
               <KolControlledInput
                 _control={this.ctrl.formBibliothek.getControl('kategorie') as InputControl}
@@ -155,8 +147,8 @@ export class BibliothekComponent extends ReactComponent<unknown, State> implemen
             _text="Die Bibliothek-Daten wurden erfolgreich hinzugefügt."
           ></KolToastMessage>
           <pre>{JSON.stringify(this.ctrl.formBibliothek.getData(), null, 2)}</pre>
-          <KolHeading _text="Ausnahmeantrag erstellen"></KolHeading>
-          <KolHeading _level={3} _text="Liste der Bibliotheken"></KolHeading>
+          <KolHeading>Ausnahmeantrag erstellen</KolHeading>
+          <KolHeading _level={3}>Liste der Bibliotheken</KolHeading>
           <dl>
             {this.ctrl.list.map((item: Bibliothek, index: number) => {
               return (
@@ -241,7 +233,7 @@ export class BibliothekComponent extends ReactComponent<unknown, State> implemen
         </div> */}
           <hr className="my-4" />
           <KolForm>
-            <KolHeading _level={2} _text="Kopfdaten"></KolHeading>
+            <KolHeading _level={2}>Kopfdaten</KolHeading>
             <div slot="content" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
               <KolControlledInput
                 _control={this.ctrl.formKopfdaten.getControl('akz') as InputControl}
@@ -322,8 +314,8 @@ export class BibliothekComponent extends ReactComponent<unknown, State> implemen
           >
             <p slot="content">Die Funktonalität zur Generierung einer Excel-Datei ist noch nicht implementiert.</p>
           </KolModal>
-          <KolHeading _level={2} _text="Hilfe"></KolHeading>
-          <KolHeading _level={3} _text="Accordeons"></KolHeading>
+          <KolHeading _level={2}>Hilfe</KolHeading>
+          <KolHeading _level={3}>Accordeons</KolHeading>
           <KolAccordion className="mb-4">
             <div slot="header">Accordeon 1</div>
             <div slot="body">...</div>
@@ -332,7 +324,7 @@ export class BibliothekComponent extends ReactComponent<unknown, State> implemen
             <div slot="header">Accordeon 2</div>
             <div slot="body">...</div>
           </KolAccordion>
-          <KolHeading _level={3} _text="Details"></KolHeading>
+          <KolHeading _level={3}>Details</KolHeading>
           <KolDetails>
             <div slot="summary">Details 1</div>
             <div slot="content">...</div>
@@ -341,7 +333,7 @@ export class BibliothekComponent extends ReactComponent<unknown, State> implemen
             <div slot="summary">Details 2</div>
             <div slot="content">...</div>
           </KolDetails>
-          <KolHeading _level={3} _text="Eingerückter Text"></KolHeading>
+          <KolHeading _level={3}>Eingerückter Text</KolHeading>
           <KolIndentedText>Ich bin ein eingerückter Text.</KolIndentedText>
         </div>
       </>

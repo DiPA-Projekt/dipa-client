@@ -16,7 +16,7 @@ class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> im
   public render(): JSX.Element {
     return (
       <>
-        <KolHeading _text="Übersicht"></KolHeading>
+        <KolHeading>Übersicht</KolHeading>
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2 2xl:grid-cols-3 gap-2">
           <KolCard _headline="Web Component Standard" _hasFooter={false}>
             <div slot="content">

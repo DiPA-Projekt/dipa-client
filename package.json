@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "@dipa-projekt/dipa-openapi": "0.13.1",
-    "@kolibri/lib": "file:own_modules/kolibri-lib-1.0.0-beta.6.tgz",
-    "@kolibri/react": "file:own_modules/kolibri-react-1.0.0-beta.6.tgz",
+    "@kolibri/lib": "file:own_modules/kolibri-lib-1.0.0-beta.7.tgz",
+    "@kolibri/react": "file:own_modules/kolibri-react-1.0.0-beta.7.tgz",
     "@leanup/cli-pwa": "1.1.24",
     "@leanup/form": "1.2.0-rc.87",
     "@leanup/lib": "1.2.0-rc.87",
@@ -43,7 +43,7 @@
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "register-service-worker": "1.7.2",
-    "rxjs": "7.1.0",
+    "rxjs": "7.2.0",
     "typescript": "4.3.5"
   },
   "files": [
