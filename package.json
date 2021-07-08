@@ -11,7 +11,7 @@
     "format": "prettier --check {src,tests}/**",
     "lint": "eslint {src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}",
     "reinstall": "npm run remove && npm install",
-    "reinstall:kolibri": "npm cache clear -f && rm -rf node_modules/@kolibri && npm i",
+    "reinstall:kolibri": "npm cache clear -f && rm -rf package-lock.json node_modules/@kolibri && npm i",
     "remove": "rm -rf node_modules package-lock.json *.log *.tgz",
     "serve": "cross-env NODE_ENV=development webpack serve --devtool=source-map",
     "start": "npm run serve -- --open=chrome",
