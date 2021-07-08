@@ -9,7 +9,7 @@
 
 | Property             | Attribute     | Description                                                                    | Type                  | Default     |
 | -------------------- | ------------- | ------------------------------------------------------------------------------ | --------------------- | ----------- |
-| `_ariaLabel`         | `_aria-label` | Gibt das Aria-Label am Icon an.                                                | `string \| undefined` | `undefined` |
+| `_ariaLabel`         | `_aria-label` | Gibt das Aria-Label am Icon an.                                                | `string \| undefined` | `''`        |
 | `_icon` _(required)_ | `_icon`       | Gibt einen Identifier eines Icons aus den Icofont's an. (https://icofont.com/) | `Icofont`             | `undefined` |
 
 

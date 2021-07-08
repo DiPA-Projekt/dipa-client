@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property       | Attribute       | Description                                                   | Type                   | Default     |
-| -------------- | --------------- | ------------------------------------------------------------- | ---------------------- | ----------- |
-| `_hasRequired` | `_has-required` | Gibt an, ob der Pflichtfeld-Hinweis eingeblendet werden soll. | `boolean \| undefined` | `undefined` |
+| Property       | Attribute       | Description                                                   | Type                   | Default |
+| -------------- | --------------- | ------------------------------------------------------------- | ---------------------- | ------- |
+| `_hasRequired` | `_has-required` | Gibt an, ob der Pflichtfeld-Hinweis eingeblendet werden soll. | `boolean \| undefined` | `true`  |
 
 
 ## Dependencies

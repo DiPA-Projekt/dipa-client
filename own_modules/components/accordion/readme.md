@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                             | Type                   | Default     |
-| -------- | --------- | --------------------------------------- | ---------------------- | ----------- |
-| `_open`  | `_open`   | Gibt an, ob das Accordeon geöffnet ist. | `boolean \| undefined` | `undefined` |
+| Property | Attribute | Description                             | Type                   | Default |
+| -------- | --------- | --------------------------------------- | ---------------------- | ------- |
+| `_open`  | `_open`   | Gibt an, ob das Accordeon geöffnet ist. | `boolean \| undefined` | `false` |
 
 
 ## Dependencies
