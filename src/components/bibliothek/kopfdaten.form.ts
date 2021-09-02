@@ -1,30 +1,30 @@
-import { FormControl, InputControl } from '@leanup/form/controls/controls';
-import { ValidationHandler } from '@leanup/form/handlers/validation.handler';
-import { EmailValidator } from '@leanup/form/handlers/validators/email.validator';
-import { DEFAULT_REQUIRED_VALIDATOR } from '@leanup/form/handlers/validators/required.validator';
+import { FormControl, InputControl } from '@leanup/form';
+import { ValidationHandler } from '@leanup/form';
+import { EmailValidator } from '@leanup/form';
+import { DEFAULT_REQUIRED_VALIDATOR } from '@leanup/form';
 
 export class KopfdatenForm extends FormControl {
   public constructor() {
     super('kopfdaten');
-    this.addConrol(
+    this.addControl(
       new InputControl('akz', {
         label: 'AKZ',
         mandatory: true,
       })
     );
-    this.addConrol(
+    this.addControl(
       new InputControl('projekt', {
         label: 'Projektbezeichnung',
         mandatory: true,
       })
     );
-    this.addConrol(
+    this.addControl(
       new InputControl('ansprechpartner', {
         label: 'Ansprechpartner',
         mandatory: true,
       })
     );
-    this.addConrol(
+    this.addControl(
       new InputControl('email', {
         label: 'E-Mail-Adresse',
         mandatory: true,
@@ -34,12 +34,12 @@ export class KopfdatenForm extends FormControl {
 
     const validationHandler = new ValidationHandler();
     validationHandler.validators.add([DEFAULT_REQUIRED_VALIDATOR]);
-    this.getControl('akz').setValidationHandler(validationHandler);
-    this.getControl('projekt').setValidationHandler(validationHandler);
-    this.getControl('ansprechpartner').setValidationHandler(validationHandler);
+    this.getControl('akz')?.setValidationHandler(validationHandler);
+    this.getControl('projekt')?.setValidationHandler(validationHandler);
+    this.getControl('ansprechpartner')?.setValidationHandler(validationHandler);
 
     const eMailValidationHandler = new ValidationHandler();
     eMailValidationHandler.validators.add([DEFAULT_REQUIRED_VALIDATOR, new EmailValidator()]);
-    this.getControl('email').setValidationHandler(eMailValidationHandler);
+    this.getControl('email')?.setValidationHandler(eMailValidationHandler);
   }
 }

@@ -1,7 +1,7 @@
 import { User } from 'oidc-client';
 
-import { AbstractController } from '@leanup/lib/components/generic';
-import { DI } from '@leanup/lib/helpers/injector';
+import { AbstractController } from '@leanup/lib';
+import { DI } from '@leanup/lib';
 
 import { OIDCService } from '../../services/oidc/service';
 
@@ -10,7 +10,7 @@ export class AppController extends AbstractController {
   public user: User | null = null;
 
   public constructor() {
-    super();
+    super({});
     this.oidcService.$user.subscribe({
       next: (user: User | null) => {
         if (user === null) {

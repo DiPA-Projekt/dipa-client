@@ -1,13 +1,12 @@
 import { User } from 'oidc-client';
-import React from 'react';
+import React, { Component } from 'react';
 import { Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom';
 
 import { Icofont } from '@kolibri/lib';
 import { BreadcrumbLink } from '@kolibri/lib/dist/types/interfaces/components/breadcrumb';
 import { KolBreadcrumb, KolIcofont, KolLink, KolNav, KolSkipNav, KolTag, KolVersion } from '@kolibri/react';
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { ReactComponent } from '@leanup/lib/components/react';
-import { DI } from '@leanup/lib/helpers/injector';
+import { GenericComponent } from '@leanup/lib';
+import { DI } from '@leanup/lib';
 
 import packageJson from '../../../package.json';
 import { OIDCService } from '../../services/oidc/service';
@@ -19,7 +18,7 @@ interface State {
   user: User | null;
 }
 
-class AppComponent extends ReactComponent<RouteComponentProps<any>, State> implements GenericComponent {
+class AppComponent extends Component<RouteComponentProps<any>, State> implements GenericComponent {
   private readonly oidcService: OIDCService = DI.get<OIDCService>('OIDCService');
 
   public ctrl: AppController = new AppController();

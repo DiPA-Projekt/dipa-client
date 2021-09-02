@@ -1,20 +1,16 @@
-import { AbstractController } from '@leanup/lib/components/generic';
-import { DI } from '@leanup/lib/helpers/injector';
+import { AbstractController } from '@leanup/lib';
+import { DI } from '@leanup/lib';
 
 import { OIDCService } from '../../services/oidc/service';
 
 export class DashboardController extends AbstractController {
   private readonly oidcService = DI.get<OIDCService>('OIDCService');
 
-  public constructor() {
-    super();
-  }
-
   public login(): void {
     this.oidcService
       .login()
       .then(() => {})
-      .catch((error) => {
+      .catch((error: string) => {
         console.warn(error);
       })
       .finally(() => {});

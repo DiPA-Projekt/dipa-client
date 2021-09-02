@@ -1,5 +1,5 @@
-import { InputControl } from '@leanup/form/controls/controls';
-import { AbstractController } from '@leanup/lib/components/generic';
+import { InputControl } from '@leanup/form';
+import { AbstractController } from '@leanup/lib';
 
 import { BibliothekForm } from './bibliothek.form';
 import { KopfdatenForm } from './kopfdaten.form';
@@ -22,7 +22,7 @@ export class BibliothekController extends AbstractController {
   public readonly list: Bibliothek[] = [];
 
   public constructor() {
-    super();
+    super({});
     try {
       const list = JSON.parse(localStorage.getItem('list') ?? '') as Bibliothek[];
       if (Array.isArray(list)) {

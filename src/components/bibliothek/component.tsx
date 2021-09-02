@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { CharBasedInputType, Icofont, OptionBasedInputType } from '@kolibri/lib';
 import {
@@ -13,9 +13,8 @@ import {
   KolSpin,
   KolToastMessage,
 } from '@kolibri/react';
-import { InputControl } from '@leanup/form/controls/controls';
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { ReactComponent } from '@leanup/lib/components/react';
+import { InputControl } from '@leanup/form';
+import { GenericComponent } from '@leanup/lib';
 
 import { KATEGORIE_OPTIONS, SCOPE_OPTIONS, TECHNOLOGIE_OPTIONS } from './bibliothek.form';
 import { Bibliothek, BibliothekController } from './controller';
@@ -32,7 +31,7 @@ interface State {
   submitLoader: boolean;
 }
 
-export class BibliothekComponent extends ReactComponent<unknown, State> implements GenericComponent {
+export class BibliothekComponent extends Component<unknown, State> implements GenericComponent {
   public ctrl: BibliothekController = new BibliothekController();
 
   public state = {

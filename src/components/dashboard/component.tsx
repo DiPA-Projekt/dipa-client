@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 
 import { Icofont } from '@kolibri/lib/';
-import { KolButton, KolCard, KolHeading, KolIcofont, KolLink } from '@kolibri/react';
-import { GenericComponent } from '@leanup/lib/components/generic';
-import { ReactComponent } from '@leanup/lib/components/react';
+import { KolButton, KolCard, KolHeading, KolLink } from '@kolibri/react';
+import { GenericComponent } from '@leanup/lib';
 
 import { DashboardController } from './controller';
 
-class DashboardComponent extends ReactComponent<RouteComponentProps<any>, {}> implements GenericComponent {
-  public ctrl: DashboardController = new DashboardController();
+class DashboardComponent extends Component<RouteComponentProps<any>, {}> implements GenericComponent {
+  public ctrl: DashboardController = new DashboardController({});
 
   public state = {};
 
