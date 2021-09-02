@@ -19,6 +19,7 @@
     "update": "ncu -t minor -u && npm install && ncu"
   },
   "devDependencies": {
+    "@dipa-projekt/dipa-openapi": "0.13.1",
     "@kolibri/lib": "file:own_modules/kolibri-lib-1.0.0-beta.13.tgz",
     "@kolibri/react": "file:own_modules/kolibri-react-1.0.0-beta.13.tgz",
     "@leanup/cli-pwa": "1.1.33",
