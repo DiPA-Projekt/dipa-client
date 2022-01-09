@@ -8,7 +8,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "lib": ["es2017", "dom"],
-    "types": ["mocha", "node", "react", "react-dom"],
+    "types": ["mocha", "node"],
     "typeRoots": ["node_modules/@types", "src/types"],
     "noUnusedLocals": true,
     "resolveJsonModule": true,
@@ -23,10 +23,8 @@
     "removeComments": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react",
-    "jsxFactory": "React.createElement",
-    "jsxFragmentFactory": "React.Fragment"
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
   },
-  "include": ["src/**/*", "tests/**/*", "node_modules/@leanup/**/*"],
-  "exclude": ["node_modules/@leanup/**/template/**/*"]
+  "include": ["src/**/*", "tests/**/*"],
 }

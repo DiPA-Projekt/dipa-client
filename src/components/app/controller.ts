@@ -1,7 +1,6 @@
 import { User } from 'oidc-client';
 
-import { AbstractController } from '@leanup/lib';
-import { DI } from '@leanup/lib';
+import { AbstractController, DI } from '@leanup/lib';
 
 import { OIDCService } from '../../services/oidc/service';
 

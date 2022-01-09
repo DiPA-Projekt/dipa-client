@@ -1,7 +1,7 @@
-// import 'core-js';
-// import 'react-app-polyfill/ie11';
-// import 'react-app-polyfill/stable';
-import './style.sass';
+import './style.scss';
+import 'uno.css';
+import '@kolibri/lib/www/assets/themes/mapz.css';
 import './shares/constant';
 import './shares/register';
-import './react.main';
+import './solid.main';
+
