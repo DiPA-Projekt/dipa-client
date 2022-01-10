@@ -1,34 +1,40 @@
-import { Component } from 'solid-js';
+import { Component, JSX } from 'solid-js';
 
 import { KolBreadcrumb, KolNav } from '@kolibri/solid';
+import { Routes, Route } from 'solid-app-router';
+import { DashboardComponent } from '../dashboard/component';
 
-import { AppController } from './controller';
-
-export const AppComponent: Component = () => {
-  const ctrl = new AppController();
+export const AppComponent: Component<JSX.HTMLAttributes<{}>> = () => {
   return (
-    <div className="container m-0 p-0 font-sans">
-      <div className="w-auto p-2">
-        <KolNav
-          _links={[
-            {
-              _label: 'Test',
-              _icon: 'home',
-            },
-            { _label: 'Test', _icon: 'inbox', _active: true },
-          ]}
-          _orientation="horizontal"
-        />
-      </div>
-      <div className="mx-2 border-0 border-y-1">
-        <KolBreadcrumb
-          _ariaLabel=""
-          _links={[
-            {
-              _label: 'Startseite',
-            },
-          ]}
-        />
+    <div class="container font-sans">
+      <KolNav
+        class="block w-auto p-2"
+        _ariaLabel=""
+        _links={[
+          {
+            _label: 'Test',
+            _icon: 'home',
+          },
+          { _label: 'Test', _icon: 'inbox', _active: true },
+        ]}
+        _orientation="horizontal"
+      />
+      <KolBreadcrumb
+        class="block text-sm mx-2 px-1 border-0 border-b-1"
+        _ariaLabel=""
+        _links={[
+          {
+            _label: 'Startseite',
+          },
+        ]}
+      />
+      <div class="grid grid-cols-2">
+        <aside></aside>
+        <main>
+          <Routes>
+            <Route path="/" element={<DashboardComponent />} />
+          </Routes>
+        </main>
       </div>
     </div>
   );

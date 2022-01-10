@@ -4,17 +4,7 @@ module.exports = (...args) => {
   const config = require('@leanup/stack-solid/webpack.config')(...args);
 
   const UnoCSS = require('@unocss/webpack').default;
-  const presetMini = require('@unocss/preset-mini').default;
-  config.plugins.unshift(
-    UnoCSS({
-      presets: [presetMini()],
-      theme: {
-        fontFace: {
-          sans: ['Arial'],
-        },
-      },
-    })
-  );
+  config.plugins.unshift(UnoCSS());
 
   config.module.rules.push({
     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
